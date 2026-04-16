@@ -66,7 +66,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/portfolio-cms.git
+https://github.com/meachsenbroseth/portfolio.git
 cd portfolio-cms```
 
 ### 2. Backend Setup (Laravel)
