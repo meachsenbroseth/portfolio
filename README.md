@@ -56,12 +56,12 @@ A full-stack portfolio content management system built with Nuxt.js 3 (frontend)
 
 ### 1. Clone the repository
 
-```
+```bash
 git clone https://github.com/yourusername/portfolio-cms.git
 cd portfolio-cms```
 
 ### 2. Backend Setup (Laravel)
-```
+```bash
 # Navigate to backend directory
 cd backend
 
@@ -92,10 +92,11 @@ php artisan db:seed --class=AdminUserSeeder
 php artisan storage:link
 
 # Start Laravel development server
-php artisan serve```
+php artisan serve
+```
 
 ### 3. Frontend Setup (Nuxt.js)
-```
+```bash
 # Navigate to frontend directory (from project root)
 cd frontend
 
@@ -109,10 +110,11 @@ cp .env.example .env
 # NUXT_PUBLIC_API_BASE=http://localhost:8000
 
 # Start development server
-npm run dev```
+npm run dev
+```
 
 ### 4. Access the Application
-```
+```bash
 Frontend: http://localhost:3000
 
 Admin Dashboard: http://localhost:3000/admin/login
@@ -123,7 +125,8 @@ Default admin credentials:
 
 Email: admin@seth.dev
 
-Password: password```
+Password: password
+```
 
 ## 📸 Screenshots
 ![](./screenshots/1.png)
