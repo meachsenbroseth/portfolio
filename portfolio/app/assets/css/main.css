@@ -1,0 +1,8 @@
+/* Typography */
+
+
+/* Ensure your Google Sans Code font is applied globally */
+body {
+  font-family: 'Google Sans Code', monospace;
+  color: #000000;
+}

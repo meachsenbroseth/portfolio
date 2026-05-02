@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   ssr: false, // fixes sanctum SSR cookie issue
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-auth-sanctum'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-auth-sanctum', '@nuxt/fonts'],
 
   sanctum: {
     baseUrl: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:80',
@@ -12,10 +12,10 @@ export default defineNuxtConfig({
     userStateKey: 'sanctum.user.identity',
     redirectIfAuthenticated: false,
     endpoints: {
-      csrf:   '/sanctum/csrf-cookie',
-      login:  '/api/login',
+      csrf: '/sanctum/csrf-cookie',
+      login: '/api/login',
       logout: '/api/logout',
-      user:   '/api/me',
+      user: '/api/me',
     },
     csrf: {
       cookie: 'XSRF-TOKEN',
@@ -23,13 +23,22 @@ export default defineNuxtConfig({
     },
     redirect: {
       keepRequestedRoute: true,
-      onLogin:            '/admin',
-      onLogout:           '/admin/login',
-      onAuthOnly:         '/admin/login',
-      onGuestOnly:        '/admin',
+      onLogin: '/admin',
+      onLogout: '/admin/login',
+      onAuthOnly: '/admin/login',
+      onGuestOnly: '/admin',
     },
   },
-
+  css: ['~/assets/css/main.css'],
+  fonts: {
+    families: [
+      {
+        name: 'Google Sans Code',
+        provider: 'google',
+        weights: [400, 500, 700]
+      }
+    ]
+  },
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:80',
